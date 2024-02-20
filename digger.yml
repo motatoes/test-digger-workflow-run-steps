@@ -1,0 +1,16 @@
+projects:
+  - name: main
+    dir: ./
+    workflow: mine
+workflows:
+  mine:
+    plan:
+      steps:
+        - init
+        - plan
+        - run: echo "I WAS PLANNED"
+    apply:
+      steps:
+        - init
+        - apply
+        - run: echo "I WAS APPLIED"
